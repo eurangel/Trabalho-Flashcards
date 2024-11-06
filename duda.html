@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <title>Meus Flashcards</title>
+</head>
+<body>
+ <h1>Flashcards de Estudo</h1>
+ 
+ <div class="flashcard" onclick="virarFlashcard(this)">
+   <div class="frente">
+     <p>O que é Anatomia Humana?</p>
+   </div>
+   <div class="verso">
+     <p>Anatomia humana é o campo da biologia responsável por estudar a forma e a estrutura do organismo humano, bem como as suas partes.</p>
+   </div>
+ </div>
+
+ <script> // solução por: Maria 
+   function virarFlashcard(flashcard) {
+     const frente = flashcard.querySelector('.frente');
+     const verso = flashcard.querySelector('.verso');
+     if (frente.style.display === 'none') {
+       frente.style.display = 'block';
+       verso.style.display = 'none';
+     } else {
+       frente.style.display = 'none';
+       verso.style.display = 'block';
+     }
+   }
+ </script>
+</body>
+</html>
